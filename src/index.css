@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --fb-font : "Noto Sans", sans-serif; 
+  --fb-blue : #0866ff; 
+  --fb-scnd-black : #e2e5e9; 
+  --fb-blacktext-on-scnd-black-bg : #65656c ; 
+  --fb-black : #1c1e21;
+  --fb-scnd-blue : #ebf5ff;  
+  --fb-bluetext-on-scnd-blue-bg : #0064d1; 
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: var(--fb-font);
+font-weight: 500;
+}
+
+/* Home.jsx Styling Are Here */
+
+.home-body{
+  height: 100vh;
+  width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 20px;
+}
+
+.home-body .home-link{
+  border: none;
+  background-color: var(--fb-blue);
+  color: white;
+  height: 50px;
+  width: 150px;
+  font-size: 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all .3s;
+}
+.home-body .home-link:hover{
+  border-radius: 30px;
+  opacity: .9;
+  font-size: 20px;
+}
+
+
+.home-body span{
+  color: var(--fb-blacktext-on-scnd-black-bg);
+}
+
+
+.home-page-loading{
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page-loading h1{
+  height: 50px;
+  width: 50px;
+  background-color: var(--fb-blue);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size: 30px;
+  animation:  homeAnimation .3s infinite; 
+}
+
+
+@keyframes homeAnimation {
+
+  0%{
+    background-color: var(--fb-bluetext-on-scnd-blue-bg);
+  /* border-right: 5px solid white; */
+  }
+50%{
+  background-color: blue;
+}
+100%{
+  font-variant: var(--fb-bluetext-on-scnd-blue-bg);
+}
+}
